@@ -86,3 +86,9 @@ if [ `isInstalled vagrant` = "N" ];then
 else
 	colorEcho ${YELLOW} "`date` ----- vagrant alerdy installed"
 fi
+if [ `isInstalled java` = "N" ];then
+	colorEcho ${BLUE} "`date` ----- install: java"
+	sudo apt-get install openjdk-7-jdk -y >> autoLog
+else
+	colorEcho ${YELLOW} "`date` ----- java alerdy installed"
+fi
